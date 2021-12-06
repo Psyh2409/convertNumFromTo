@@ -29,7 +29,7 @@ public class Main {
         number = number.toUpperCase(Locale.ROOT);
         for (int i = number.length() - 1; i >= 0; i--) {
             if (number.charAt(i) < 'A') {
-                answer += Integer.parseInt(String.valueOf(number.charAt(i))) * power;
+                answer += Integer.parseInt(number.substring(i, i+1)) * power;
             } else {
                 answer += (number.charAt(i) - 'A' + 10) * power;
             }
